@@ -1,0 +1,7 @@
+numpy==1.17.4
+streamlit==0.62.1
+pillow
+keras==2.3.1
+tensorflow==2.1.0-rc2
+PIL==7.2.0
+time

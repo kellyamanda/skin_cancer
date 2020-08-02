@@ -1,0 +1,21 @@
+
+body{
+background-color: #FDFEFE;
+background-image: url("https://singularityhub.com/wp-content/uploads/2019/02/doctor-robot-modern-future-health-artificial-intelligence-shutterstock-1072509989.jpg");
+    color : white
+     
+}
+
+.bold {
+font-weight: 1000;
+}
+
+
+.highlight {
+  border-radius: 0.4rem;
+  font-size : 200% ;
+  color:red;
+  text-decoration: underline overline dotted red ;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
