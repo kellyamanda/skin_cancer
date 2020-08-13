@@ -1,4 +1,4 @@
-numpy==1.17.4
+numpy==1.16.16
 streamlit==0.62.1
 pillow
 keras==2.3.1
