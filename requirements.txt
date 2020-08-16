@@ -2,7 +2,7 @@ pip==20.2.2
 numpy==1.19.1
 streamlit==0.62.1
 pillow
-tensorflow==2.1.0-rc2
+tensorflow
 keras==2.3.1
 
 
