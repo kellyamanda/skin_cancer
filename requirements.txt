@@ -1,3 +1,4 @@
+pip==20.2.2
 numpy==1.16.16
 streamlit==0.62.1
 pillow
