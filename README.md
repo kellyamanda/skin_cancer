@@ -1,4 +1,4 @@
-# AI model to identify benign and Malinant Melanoma 
+# AI model to identify benign and Malignant Melanoma 
 
 by @Arun Ramji Shanmugam - arunramji11@gmail.com
 
