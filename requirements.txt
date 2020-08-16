@@ -3,5 +3,5 @@ numpy==1.19.1
 streamlit==0.62.1
 pillow
 keras==2.3.1
-tensorflow==2.1.0-rc2
+tensorflow==2.0
 
