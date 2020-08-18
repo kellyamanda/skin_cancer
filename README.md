@@ -48,4 +48,20 @@ by @Arun Ramji Shanmugam - arunramji11@gmail.com
 
 ![alt text](https://github.com/ArunRamji/skin_cancer/blob/master/Screenshot%202020-08-19%20at%2012.13.43%20AM.png)
 
+### Page 2
+
+![alt text](https://github.com/ArunRamji/skin_cancer/blob/master/Screenshot%202020-08-19%20at%2012.15.43%20AM.png)
+
+### Page 3
+
+![alt text](https://github.com/ArunRamji/skin_cancer/blob/master/Screenshot%202020-08-19%20at%2012.16.26%20AM.png)
+
+
+## Next Steps :
+
+1. Have to enahnce the model to detect wide variety of skin diseases (Multiclass classification)
+2. Gather more data and attain near human doctor level accuracy 
+3. Deploy the app as opens source medical assistance tool .
+
+
 
