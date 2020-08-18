@@ -44,6 +44,8 @@ by @Arun Ramji Shanmugam - arunramji11@gmail.com
 
 ## Application UI 
 
+### Page 1
 
+![alt text](https://github.com/ArunRamji/skin_cancer/blob/master/Screenshot%202020-08-19%20at%2012.13.43%20AM.png)
 
 
