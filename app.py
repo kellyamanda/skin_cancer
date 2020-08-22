@@ -24,7 +24,7 @@ st.write("Upload an image to see if it is Benign or Malignant type of Melanoma")
 uploaded_file = st.file_uploader("Choose an Image ...", type="jpg")
 if uploaded_file is not None:
     #uploaded_file = Image.open(uploaded_file)
-    #uploaded_file = uploaded_file.get_values()
+    uploaded_file = uploaded_file.get_values()
     st.image(uploaded_file, caption='Uploaded Image.', use_column_width=True)
     st.write("")
     st.write("Classifying...")
