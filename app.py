@@ -29,6 +29,7 @@ if uploaded_file is not None:
     st.write("")
     st.write("Classifying...")
     st.write(type(uploaded_file))
+    st.write(uploaded_file)
     label = machine_classification(uploaded_file,'model1.h5')
     my_bar = st.progress(0)
     for percent_complete in range(100):
