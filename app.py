@@ -2,6 +2,7 @@ import streamlit as st
 from Image_Classification import *
 import time
 #import PIL.Image as Image
+import base64
 
 def local_css(file_name):
     with open(file_name) as f:
