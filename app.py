@@ -1,7 +1,7 @@
 import streamlit as st
 from Image_Classification import *
 import time
-import base64
+import PIL.Image as Image
 
 def local_css(file_name):
     with open(file_name) as f:
@@ -26,7 +26,10 @@ if uploaded_file is not None:
     uploaded_file = Image.open(uploaded_file)
     #uploaded_file = byte(uploaded_file)
     #uploaded_file = base64.b64encode(uploaded_file)
-    uploaded_file = uploaded_file.getvalue()
+    pil_im = Image.fromarray(uploaded_file)
+    b = io.BytesIO()
+    pil_im.save(b, 'jpeg')
+    uploaded_file = b.getvalue()
     st.write(type(uploaded_file))
     st.image(uploaded_file, caption='Uploaded Image.', use_column_width=True)
     st.write("")
