@@ -1,5 +1,11 @@
 pip==20.2.2
 numpy==1.19.1
+scipy
+keras-preprocessing
+six
+pyyaml
+h5py
+keras-applications
 streamlit==0.62.1
 pillow
 tensorflow
