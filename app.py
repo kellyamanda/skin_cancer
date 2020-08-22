@@ -24,21 +24,15 @@ st.write("Upload an image to see if it is Benign or Malignant type of Melanoma")
 
 uploaded_file = st.file_uploader("Choose an Image ...", type="jpg")
 if uploaded_file is not None:
-    #uploaded_file = Image.open(uploaded_file)
-    img  = base64.b64encode(uploaded_file.getvalue())
+    img  = Image.open(uploaded_file)
+    #img  = base64.b64encode(uploaded_file.getvalue())
     #uploaded_file = uploaded_file.get_values()
     st.image(uploaded_file, caption='Uploaded Image.', use_column_width=True)
     st.write("")
     st.write("Classifying...")
     st.write(type(img))
     st.write(img)
-    try:
-        label = machine_classification(img,'model1.h5')
-    except OSError as exc:
-        if exc.errno == 36:
-            handle_filename_too_long()
-        else:
-            raise 
+    label = machine_classification(img,'model1.h5')
     my_bar = st.progress(0)
     for percent_complete in range(100):
         time.sleep(0.1)
