@@ -29,7 +29,8 @@ if uploaded_file is not None:
     st.write("")
     st.write("Classifying...")
     st.write(type(uploaded_file.read()))
-    label = machine_classification(uploaded_file.read(),'model1.h5')
+    #label = machine_classification(uploaded_file.read(),'model1.h5')
+    label = machine_classification('Screenshot 2020-08-19 at 12.13.43 AM.png','model1.h5')
     my_bar = st.progress(0)
     for percent_complete in range(100):
         time.sleep(0.1)
