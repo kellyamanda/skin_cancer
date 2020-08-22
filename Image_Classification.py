@@ -9,8 +9,7 @@ def machine_classification(img, weights_file):
     #weights_file = '/Users/arunramji/Downloads/cats_and_dogs_small_1.h5'
     model = load_model(weights_file)
     from keras.preprocessing import image
-    test_image = image.load_img(
-    img,target_size = (150,150))
+    test_image = image.load_img(img,target_size = (150,150))
     test_image = image.img_to_array(test_image) #making it 3D array as input layer is 3D     
     test_image = np.expand_dims(test_image,axis=0) #adding bias variable
 
