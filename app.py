@@ -35,10 +35,10 @@ if uploaded_file is not None:
     try:
         label = machine_classification(img,'model1.h5')
     except OSError as exc:
-    if exc.errno == 36:
-        handle_filename_too_long()
-    else:
-        raise 
+        if exc.errno == 36:
+            handle_filename_too_long()
+        else:
+            raise 
     my_bar = st.progress(0)
     for percent_complete in range(100):
         time.sleep(0.1)
