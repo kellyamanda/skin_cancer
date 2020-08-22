@@ -1,7 +1,7 @@
 import streamlit as st
 from Image_Classification import *
 import time
-import PIL.Image as Image
+#import PIL.Image as Image
 
 def local_css(file_name):
     with open(file_name) as f:
@@ -24,13 +24,12 @@ st.write("Upload an image to see if it is Benign or Malignant type of Melanoma")
 uploaded_file = st.file_uploader("Choose an Image ...", type="jpg")
 if uploaded_file is not None:
     uploaded_file = Image.open(uploaded_file)
+    with open(uploaded_file, "rb") as image:
+        f = image.read()
+        b = bytearray(f)
     #uploaded_file = byte(uploaded_file)
     #uploaded_file = base64.b64encode(uploaded_file)
-    pil_im = Image.fromarray(uploaded_file)
-    b = io.BytesIO()
-    pil_im.save(b, 'jpeg')
-    uploaded_file = b.getvalue()
-    st.write(type(uploaded_file))
+    st.write(type(b[0]))
     st.image(uploaded_file, caption='Uploaded Image.', use_column_width=True)
     st.write("")
     st.write("Classifying...")
