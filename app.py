@@ -25,6 +25,7 @@ if uploaded_file is not None:
     #image = Image.open(uploaded_file)
     st.image(uploaded_file, caption='Uploaded Image.', use_column_width=True)
     st.write("")
+    st.write(uploaded_file)
     st.write("Classifying...")
     label = machine_classification(uploaded_file,'model1.h5')
     my_bar = st.progress(0)
