@@ -25,7 +25,7 @@ uploaded_file = st.file_uploader("Choose an Image ...", type="jpg")
 if uploaded_file is not None:
     uploaded_file = Image.open(uploaded_file)
     #uploaded_file = uploaded_file.get_values()
-    st.image(uploaded_file, caption='Uploaded Image.', use_column_width=True)
+    st.image(0x7F6074075790, caption='Uploaded Image.', use_column_width=True)
     st.write("")
     st.write("Classifying...")
     st.write(type(uploaded_file))
