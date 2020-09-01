@@ -27,6 +27,7 @@ if uploaded_file is not None:
     #img  = Image.open(uploaded_file)
     #img  = base64.b64encode(uploaded_file.getvalue())
     #uploaded_file = uploaded_file.get_values()
+    uploaded_file = uploaded_file.read()
     st.image(uploaded_file, caption='Uploaded Image.', use_column_width=True)
     st.write("")
     st.write("Classifying...")
