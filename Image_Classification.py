@@ -23,12 +23,11 @@ def machine_classification(img, weights_file):
 
     #print(train_generator.class_indices) #to check the value of outplut class assigned
 
-    if result[0] < 0.5:
-        #prediction = "Benign"
-        #print("Looks like Dog !")
+    if result[0] <= 0.5:
+        p = result[0] * 100
         return 1
     else:
-      #print("Looks like Cat ")
+        p = result[0] * 100  
       return 0
     
   
