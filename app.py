@@ -31,7 +31,7 @@ if uploaded_file is not None:
     st.write("")
     st.write("Classifying...")
     uploaded_file = uploaded_file.read()
-    st.write(type(uploaded_file))
+    #st.write(type(uploaded_file))
     #st.write(uploaded_file)
     label = machine_classification(uploaded_file,'model1.h5')
     my_bar = st.progress(0)
