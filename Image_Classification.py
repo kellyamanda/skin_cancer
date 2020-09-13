@@ -10,7 +10,7 @@ def machine_classification(img, weights_file):
     model = load_model(weights_file)
     from keras.preprocessing import image
     import io
-    test_image = Image.open(io.BytesIO(img_bytes))
+    test_image = Image.open(io.BytesIO(img))
     test_image = test_image.convert('RGB')
     test_image = test_image.resize((150,150), Image.NEAREST)
     test_image = image.img_to_array(test_image)
