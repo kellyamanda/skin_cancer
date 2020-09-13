@@ -28,6 +28,6 @@ def machine_classification(img, weights_file):
         return 1
     else:
         p = result[0] * 100  
-      return 0
+        return 0
     
   
