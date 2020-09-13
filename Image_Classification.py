@@ -25,9 +25,9 @@ def machine_classification(img, weights_file):
 
     if result[0] <= 0.5:
         p = result[0] * 100
-        return 1
+        return 1,p
     else:
         p = result[0] * 100  
-        return 0
+        return 0,p
     
   
