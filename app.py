@@ -1,7 +1,7 @@
 import streamlit as st
 from Image_Classification import *
 import time
-#import PIL.Image as Image
+from PIL import Image, ImageOps
 import base64
 from tensorflow.keras.models import load_model
 from keras import models
@@ -48,9 +48,12 @@ if uploaded_file is not None:
     import numpy as np
      
     st.write(type(uploaded_file))
-    img = image.load_img(uploaded_file, target_size=(150, 150))
-    img_tensor = image.img_to_array(img)
-    img_tensor = np.expand_dims(img_tensor, axis=0)
+    import io
+    test_image = Image.open(io.BytesIO(uploaded_file))
+    test_image = test_image.convert('RGB')
+    test_image = test_image.resize((150,150), Image.NEAREST)
+    img_tensor = image.img_to_array(test_image)
+    img_tensor = np.expand_dims(img_tensor,axis=0) #adding bias variable
     img_tensor /= 255.
 #   st.write(img_tensor.shape)
     
