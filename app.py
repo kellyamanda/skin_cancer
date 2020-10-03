@@ -35,7 +35,7 @@ if uploaded_file is not None:
     #uploaded_file = uploaded_file.get_values()
     st.image(uploaded_file, caption='Uploaded Image.', use_column_width=True)
     st.write("")
-    st.write("Classifying...")
+    #st.write("Classifying...")
     uploaded_file = uploaded_file.read()
     st.write("")
     st.write("Hi Doctor , Below are the sample images of how it looked like in my each layer of neural network...")
@@ -47,7 +47,7 @@ if uploaded_file is not None:
     from keras.preprocessing import image 
     import numpy as np
      
-    st.write(type(uploaded_file))
+#   st.write(type(uploaded_file))
     import io
     test_image = Image.open(io.BytesIO(uploaded_file))
     test_image = test_image.convert('RGB')
@@ -93,6 +93,8 @@ if uploaded_file is not None:
             
     #st.write(type(uploaded_file))
     #st.write(uploaded_file)
+    st.write("Based on my analysis , Below is the result. keep in mind I am just 70% expert(accurate) now !!")
+    st.write("Classifying...")
     label = machine_classification(uploaded_file,'model1.h5')
     my_bar = st.progress(0)
     for percent_complete in range(100):
