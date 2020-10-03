@@ -17,7 +17,7 @@ def local_css(file_name):
 
 local_css("style.css")
 st.title("Image Classification of Benign and Malignant skin cancer ")
-st.header("We are going predict whether uploaded image of Melanoma is benign or Malignant")
+st.header("We are going to predict whether uploaded image of Melanoma is benign or Malignant")
 st.write("Created on July'14 2020")
 st.write("@Author: Arun Ramji Shanmugam")
 st.write("________________________")
