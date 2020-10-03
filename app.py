@@ -38,7 +38,7 @@ if uploaded_file is not None:
     #st.write("Classifying...")
     uploaded_file = uploaded_file.read()
     st.write("")
-    st.write("Hi Doctor , Below are the sample images of how it looked like in my each layer of neural network...")
+    st.write("Hi Doctor , Below are the sample images of how it looked like in some my neural network layer...")
     
 #     #Let's visualise all activation in the network
 #     from keras.models import load_model
