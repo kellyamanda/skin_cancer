@@ -8,7 +8,7 @@ from keras import models
 from tensorflow.keras.models import Model
 import matplotlib.pyplot as plt
 
-
+classifier = load_model('model1.h5')
 
 def local_css(file_name):
     with open(file_name) as f:
