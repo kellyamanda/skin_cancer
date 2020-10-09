@@ -26,7 +26,7 @@ st.write(" ")
 st.write("Click to seen an example or upload an image to see if it is Benign or Malignant type of Melanoma")
 
 example_button = st.button("See an example image")
-example_image = "Lentigo_maligna.JPG"
+example_image = "Lentigo_maligna.JPEG"
 if example_button:
     st.image(example_image, caption='Example Image', use_column_width=True)
     st.write("")
