@@ -89,7 +89,7 @@ if example_button:
     #st.write(uploaded_file)
     st.write("Based on my analysis , Below is the result. keep in mind I am just 70% expert(accurate) now !!")
     st.write("Classifying...")
-    label = machine_classification(uploaded_file,'model1.h5')
+    label = machine_classification(test_image,'model1.h5')
     my_bar = st.progress(0)
     for percent_complete in range(100):
         time.sleep(0.1)
