@@ -31,7 +31,7 @@ if example_button:
     st.image(example_image, caption='Example Image', use_column_width=True)
     st.write("")
     #st.write("Classifying...")
-    uploaded_file = example_image.read()
+    uploaded_file = example_image
     st.write("")
     st.write("Hi Doctor , Below are the sample images of how it looked like in some of my neural network layer...")
 #     #Let's visualise all activation in the network
