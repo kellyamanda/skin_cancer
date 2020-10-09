@@ -25,12 +25,13 @@ st.write(" ")
 st.write(" ")
 st.write("Click to seen an example or upload an image to see if it is Benign or Malignant type of Melanoma")
 
-example_image = st.button("See an example image")
-if example_image:
-    st.image("https://upload.wikimedia.org/wikipedia/en/f/f9/Lentigo_maligna.JPG", caption='Example Image', use_column_width=True)
+example_button = st.button("See an example image")
+example_image = "https://upload.wikimedia.org/wikipedia/en/f/f9/Lentigo_maligna.JPG"
+if example_button:
+    st.image(example_image, caption='Example Image', use_column_width=True)
     st.write("")
     #st.write("Classifying...")
-    uploaded_file = uploaded_file.read()
+    uploaded_file = example_image.read()
     st.write("")
     st.write("Hi Doctor , Below are the sample images of how it looked like in some of my neural network layer...")
 #     #Let's visualise all activation in the network
