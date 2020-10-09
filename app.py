@@ -43,7 +43,7 @@ if example_button:
 
 #   st.write(type(uploaded_file))
     import io
-    test_image = Image.open(io.BytesIO(uploaded_file))
+    test_image = Image.open(uploaded_file)
     test_image = test_image.convert('RGB')
     test_image = test_image.resize((150,150), Image.NEAREST)
     img_tensor = image.img_to_array(test_image)
