@@ -23,30 +23,36 @@ st.write("@Author: Arun Ramji Shanmugam")
 st.write("________________________")
 st.write(" ")
 st.write(" ")
-st.write(" ")
-st.write(" ")
-st.write("Upload an image to see if it is Benign or Malignant type of Melanoma")
+st.write("Click to seen an example or upload an image to see if it is Benign or Malignant type of Melanoma")
 
+example_image = st.button("See an example image")
+if example_image:
+    st.image("https://upload.wikimedia.org/wikipedia/en/f/f9/Lentigo_maligna.JPG", caption='Example Image', use_column_width=True)
+    st.write("")
+    #st.write("Classifying...")
+    uploaded_file = uploaded_file.read()
+    st.write("")
+    st.write("Hi Doctor , Below are the sample images of how it looked like in some of my neural network layer...")
 
 uploaded_file = st.file_uploader("Choose an Image ...", type=("jpg","png","jpeg"))
 if uploaded_file is not None:
     #img  = Image.open(uploaded_file)
     #img  = base64.b64encode(uploaded_file.getvalue())
     #uploaded_file = uploaded_file.get_values()
-    st.image(uploaded_file, caption='Uploaded Image.', use_column_width=True)
+    st.image(uploaded_file, caption='Uploaded Image', use_column_width=True)
     st.write("")
     #st.write("Classifying...")
     uploaded_file = uploaded_file.read()
     st.write("")
     st.write("Hi Doctor , Below are the sample images of how it looked like in some of my neural network layer...")
-    
+
 #     #Let's visualise all activation in the network
 #     from keras.models import load_model
 #     classifier = load_model('model1.h5')
-    
-    from keras.preprocessing import image 
+
+    from keras.preprocessing import image
     import numpy as np
-     
+
 #   st.write(type(uploaded_file))
     import io
     test_image = Image.open(io.BytesIO(uploaded_file))
@@ -56,10 +62,10 @@ if uploaded_file is not None:
     img_tensor = np.expand_dims(img_tensor,axis=0) #adding bias variable
     img_tensor /= 255.
 #   st.write(img_tensor.shape)
-    
+
 
     layer_outputs = [layer.output for layer in classifier.layers[:8]] #Extract the output of top 4 layer
-    activation_model = Model(inputs=classifier.input, outputs=layer_outputs) 
+    activation_model = Model(inputs=classifier.input, outputs=layer_outputs)
 
     activations = activation_model.predict(img_tensor) #Running model on predict mode
 
@@ -85,12 +91,12 @@ if uploaded_file is not None:
                 display_grid[col * size : (col + 1) * size,
                                   row * size : (row + 1) * size] = channel_image
             scale =1. / size
-            plt.figure(figsize=(scale * display_grid.shape[1],scale * display_grid.shape[0])) 
+            plt.figure(figsize=(scale * display_grid.shape[1],scale * display_grid.shape[0]))
             plt.title(layer_name)
             plt.grid(False)
             plt.imshow(display_grid, aspect='auto', cmap='viridis')
             st.pyplot()
-            
+
     #st.write(type(uploaded_file))
     #st.write(uploaded_file)
     st.write("Based on my analysis , Below is the result. keep in mind I am just 70% expert(accurate) now !!")
@@ -110,13 +116,11 @@ if uploaded_file is not None:
         t = "<div>As per our AI Engine - There is a chance that it is a<span class='highlight'> <span class='bold'> Malignant</span> </span> melanoma!</div>"
         st.markdown(t, unsafe_allow_html=True)
         #st.write("With the probability of",label[1])
-        
-     
-  
-    
-    
+
+
+
+
+
     st.write("______________________________________")
     st.write(" ")
-    st.write("Disclaimer : What ever the prediction made by our App is purely for educational and training purpose!!")   
-
-
+    st.write("Disclaimer : What ever the prediction made by our App is purely for educational and training purpose!!")
