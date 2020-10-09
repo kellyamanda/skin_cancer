@@ -17,12 +17,9 @@ def local_css(file_name):
 
 local_css("style.css")
 st.title("Image Classification of Benign and Malignant skin cancer ")
-st.header("We are going to predict whether uploaded image of Melanoma is benign or Malignant")
-st.write("Created on July'14 2020")
-st.write("@Author: Arun Ramji Shanmugam")
+st.subheader("We are going to predict whether uploaded image of Melanoma is benign or Malignant")
+st.write("Created July'14 2020 by Arun Ramji Shanmugam")
 st.write("________________________")
-st.write(" ")
-st.write(" ")
 st.write("Click to seen an example or upload an image to see if it is Benign or Malignant type of Melanoma")
 
 example_button = st.button("See an example image")
@@ -89,7 +86,7 @@ if example_button:
     #st.write(uploaded_file)
     st.write("Based on my analysis , Below is the result. keep in mind I am just 70% expert(accurate) now !!")
     st.write("Classifying...")
-    label = machine_classification(test_image,'model1.h5')
+    label = machine_classification(uploaded_file,'model1.h5')
     my_bar = st.progress(0)
     for percent_complete in range(100):
         time.sleep(0.1)
