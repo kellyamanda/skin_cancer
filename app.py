@@ -28,10 +28,10 @@ if example_button:
     st.image(example_image, caption='Example Image', use_column_width=True)
     st.write("")
     #st.write("Classifying...")
-    pil_im = Image.fromarray(example_image)
-    b = io.BytesIO()
-    pil_im.save(b, 'jpeg')
-    uploaded_file = b.getvalue()
+    with open(example_image, "rb") as image:
+      f = image.read()
+      b = bytearray(f)
+      uploaded_file = b[0]
 
     st.write("")
     st.write("Hi Doctor , Below are the sample images of how it looked like in some of my neural network layer...")
