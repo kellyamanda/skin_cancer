@@ -17,10 +17,10 @@ def local_css(file_name):
 
 local_css("style.css")
 st.title("Image Classification of Benign and Malignant skin cancer ")
-st.subheader("Let's predict whether a selected image is a Benign or Malignant Melanoma")
+st.subheader("We are going to predict whether uploaded image of Melanoma is benign or Malignant")
 st.write("Created July'14 2020 by Arun Ramji Shanmugam")
 st.write("________________________")
-st.write("Click to seen an example or upload an image to see if it's a **Benign** or **Malignant** Melanoma")
+st.write("Click to seen an example or upload an image to see if it is a **Benign** or **Malignant** type of Melanoma")
 
 example_button = st.button("See an example")
 example_image = "Lentigo_maligna.jpeg"
@@ -28,7 +28,11 @@ if example_button:
     st.image(example_image, caption='Example Image', use_column_width=True)
     st.write("")
     #st.write("Classifying...")
-    uploaded_file = example_image
+    pil_im = Image.fromarray(example_image)
+    b = io.BytesIO()
+    pil_im.save(b, 'jpeg')
+    uploaded_file = b.getvalue()
+
     st.write("")
     st.write("Hi Doctor , Below are the sample images of how it looked like in some of my neural network layer...")
 #     #Let's visualise all activation in the network
@@ -40,7 +44,7 @@ if example_button:
 
 #   st.write(type(uploaded_file))
     import io
-    test_image = Image.open(io.BytesIO(uploaded_file))
+    test_image = Image.open(uploaded_file)
     test_image = test_image.convert('RGB')
     test_image = test_image.resize((150,150), Image.NEAREST)
     img_tensor = image.img_to_array(test_image)
