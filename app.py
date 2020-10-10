@@ -20,7 +20,7 @@ st.title("Image Classification of Benign and Malignant skin cancer ")
 st.subheader("Let's predict whether an uploaded image is a Benign or Malignant Melanoma")
 st.write("Created July'14 2020 by Arun Ramji Shanmugam")
 st.write("________________________")
-st.write("Click to seen an example or upload an image and see if it's a **Benign** or **Malignant** type of Melanoma")
+st.write("Click to seen an example or upload an image and see if it's a **Benign** or **Malignant** Melanoma")
 
 example_button = st.button("See an example")
 example_image = "Lentigo_maligna.jpeg"
