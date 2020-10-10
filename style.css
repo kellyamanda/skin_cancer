@@ -1,7 +1,7 @@
 
 body{
 background-color: #FDFEFE;
-background-image: "robo.png";
+background-image: url("robo.png");
 
 }
 
